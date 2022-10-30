@@ -12,7 +12,7 @@
 /build
 
 # Byte-compiled
-__pycache__/
+*/__pycache__/
 
 # misc
 .DS_Store
