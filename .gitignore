@@ -11,8 +11,8 @@
 # production
 /build
 
-#pycache
-/api/__pycache__/
+# Byte-compiled
+__pycache__/
 
 # misc
 .DS_Store
