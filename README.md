@@ -1,5 +1,5 @@
 # Password Generator Application
-## About Project
+### About Project
 This application allows you to generate a number of randomly generated passwords. The application gets the randomly generated passwords from the API developed using **Python's Flask** framework. You can interact with the API using the applications front-end developed using **ReactJS**. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Getting Started
