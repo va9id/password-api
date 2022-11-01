@@ -8,20 +8,19 @@
     </head>
     <body>
         <header>
-            <h1>Password Generator</h1>
-            <p>Get a random auto generated password based on the following criteria:</p>
+            <h1>Passw*rd Generat*r</h1>
+            <p>Get a random auto generated password from the API based on the following parameters:</p>
         </header>
         <main>
             <div id="root">
             <form action="/frontend/src/App.js">
                 <label for="passwordLength">Password Length:</label><br>
                 <input type="number" id="passwordLength" name="length" value="8" min="8" max="30"><br>
-                <label for="passwordAmount">Amount of Passwords:</label><br>
+                <label for="passwordAmount">Amount Passwords:</label><br>
                 <input type="number" id="passwordAmount" name="amount" value="1" min="1" max="10"><br>
                 <input type="submit" value="Generate Password">
             </form>
             </div>
-
         </main>
     </body>
 </html>

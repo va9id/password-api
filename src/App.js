@@ -28,45 +28,47 @@ function App() {
   
   return (
     <div className="App">
-      <div className='apiForm'>
-        <form onSubmit={handleSubmit}>
-          <div className='passwordlength'>
-            <label htmlFor="passwordLength">Password Length:</label>
-            <input
-              type="number"
-              name="passwordLength"
-              value={passwordLength}
-              min="8"
-              max="30"
-              placeholder="8"
-              onChange={ (e) => setPasswordLength(e.target.value)}
-            />
-          </div> 
-          <div className='passwordAmount'>
-          <label htmlFor="passwordAmount">Amount of Passwords:</label>
+      <div className="api-form">
+      <form onSubmit={handleSubmit}>
+        <div className='passwordlength'>
+          <label htmlFor="passwordLength">Password Length:</label>
           <input
             type="number"
+            name="passwordLength"
+            id="passwordLength"
+            value={passwordLength}
+            min="8"
+            max="30"
+            placeholder="8"
+            onChange={(e) => setPasswordLength(e.target.value)}
+          />
+        </div> 
+        <div className='passwordAmount'>
+          <label htmlFor="passwordAmount">Amount of Passwords:</label> 
+          <input
+            type="number"
+            id = "passwordAmount"
             name="passwordAmount"
             value={passwordAmount}
             min="1"
             max="10"
             placeholder="1"
-            onChange={ (e) => setPasswordAmount(e.target.value)}
+            onChange={(e) => setPasswordAmount(e.target.value)}
           />
-          </div>
-          <button type="submit">Generate Password</button>
-        </form>
-        <button onClick={handleReset}>Reset</button>
+        </div>
+        <button type="submit">Generate Password</button>
+        <button type="button" id="resetButton" onClick={handleReset}>Reset</button>
+      </form>
       </div>
       <div className='passwords'>
         <table>
           <thead>
-            <tr>  
-              <th>Passwords</th>
+            <tr>
+              {passwords.length === 0 ?"":<><th>Password</th><th>Value</th></>}
             </tr>
           </thead>
           <tbody>
-            {passwords!=null? passwords.map((p, i) => <tr key={i}><td>{p}</td></tr>):null}
+            {passwords!=null? passwords.map((p, i) => <tr key={i}><td>{i+1}</td><td>{p}</td></tr>):null}
           </tbody>
         </table>
       </div>
@@ -74,33 +76,3 @@ function App() {
   );
 }
 export default App;
-
-
-/*
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
-
-*/
